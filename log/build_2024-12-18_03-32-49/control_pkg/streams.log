@@ -1,0 +1,28 @@
+[0.472s] Invoking command in '/home/chayakorn/ros_ws/src/control_pkg': PYTHONPATH=/home/chayakorn/ros_ws/build/control_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chayakorn/ros_ws/install/control_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/control_pkg build --build-base /home/chayakorn/ros_ws/build/control_pkg/build install --record /home/chayakorn/ros_ws/build/control_pkg/install.log --single-version-externally-managed install_data
+[0.640s] running egg_info
+[0.640s] writing ../../build/control_pkg/control_pkg.egg-info/PKG-INFO
+[0.640s] writing dependency_links to ../../build/control_pkg/control_pkg.egg-info/dependency_links.txt
+[0.640s] writing entry points to ../../build/control_pkg/control_pkg.egg-info/entry_points.txt
+[0.640s] writing requirements to ../../build/control_pkg/control_pkg.egg-info/requires.txt
+[0.641s] writing top-level names to ../../build/control_pkg/control_pkg.egg-info/top_level.txt
+[0.642s] reading manifest file '../../build/control_pkg/control_pkg.egg-info/SOURCES.txt'
+[0.646s] adding license file 'LICENSE'
+[0.646s] writing manifest file '../../build/control_pkg/control_pkg.egg-info/SOURCES.txt'
+[0.647s] running build
+[0.647s] running build_py
+[0.647s] copying control_pkg/control_node.py -> /home/chayakorn/ros_ws/build/control_pkg/build/lib/control_pkg
+[0.647s] copying control_pkg/pwm_node.py -> /home/chayakorn/ros_ws/build/control_pkg/build/lib/control_pkg
+[0.647s] running install
+[0.647s] running install_lib
+[0.648s] copying /home/chayakorn/ros_ws/build/control_pkg/build/lib/control_pkg/control_node.py -> /home/chayakorn/ros_ws/install/control_pkg/lib/python3.10/site-packages/control_pkg
+[0.649s] copying /home/chayakorn/ros_ws/build/control_pkg/build/lib/control_pkg/pwm_node.py -> /home/chayakorn/ros_ws/install/control_pkg/lib/python3.10/site-packages/control_pkg
+[0.649s] byte-compiling /home/chayakorn/ros_ws/install/control_pkg/lib/python3.10/site-packages/control_pkg/control_node.py to control_node.cpython-310.pyc
+[0.650s] byte-compiling /home/chayakorn/ros_ws/install/control_pkg/lib/python3.10/site-packages/control_pkg/pwm_node.py to pwm_node.cpython-310.pyc
+[0.650s] running install_data
+[0.650s] running install_egg_info
+[0.651s] removing '/home/chayakorn/ros_ws/install/control_pkg/lib/python3.10/site-packages/control_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[0.652s] Copying ../../build/control_pkg/control_pkg.egg-info to /home/chayakorn/ros_ws/install/control_pkg/lib/python3.10/site-packages/control_pkg-0.0.0-py3.10.egg-info
+[0.653s] running install_scripts
+[0.668s] Installing control_node script to /home/chayakorn/ros_ws/install/control_pkg/lib/control_pkg
+[0.668s] writing list of installed files to '/home/chayakorn/ros_ws/build/control_pkg/install.log'
+[0.694s] Invoked command in '/home/chayakorn/ros_ws/src/control_pkg' returned '0': PYTHONPATH=/home/chayakorn/ros_ws/build/control_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chayakorn/ros_ws/install/control_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/control_pkg build --build-base /home/chayakorn/ros_ws/build/control_pkg/build install --record /home/chayakorn/ros_ws/build/control_pkg/install.log --single-version-externally-managed install_data

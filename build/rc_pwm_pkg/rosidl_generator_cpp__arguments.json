@@ -3,7 +3,8 @@
   "output_dir": "/home/chayakorn/ros_ws/build/rc_pwm_pkg/rosidl_generator_cpp/rc_pwm_pkg",
   "template_dir": "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource",
   "idl_tuples": [
-    "/home/chayakorn/ros_ws/build/rc_pwm_pkg/rosidl_adapter/rc_pwm_pkg:msg/Pwm.idl"
+    "/home/chayakorn/ros_ws/build/rc_pwm_pkg/rosidl_adapter/rc_pwm_pkg:msg/Pwm.idl",
+    "/home/chayakorn/ros_ws/build/rc_pwm_pkg/rosidl_adapter/rc_pwm_pkg:msg/PubPwm.idl"
   ],
   "target_dependencies": [
     "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp",
@@ -21,6 +22,7 @@
     "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource/srv__builder.hpp.em",
     "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource/srv__struct.hpp.em",
     "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource/srv__traits.hpp.em",
-    "/home/chayakorn/ros_ws/build/rc_pwm_pkg/rosidl_adapter/rc_pwm_pkg/msg/Pwm.idl"
+    "/home/chayakorn/ros_ws/build/rc_pwm_pkg/rosidl_adapter/rc_pwm_pkg/msg/Pwm.idl",
+    "/home/chayakorn/ros_ws/build/rc_pwm_pkg/rosidl_adapter/rc_pwm_pkg/msg/PubPwm.idl"
   ]
 }

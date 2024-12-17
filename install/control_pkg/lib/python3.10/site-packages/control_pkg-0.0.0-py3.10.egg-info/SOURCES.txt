@@ -11,6 +11,7 @@ setup.py
 ../../build/control_pkg/control_pkg.egg-info/zip-safe
 control_pkg/__init__.py
 control_pkg/control_node.py
+control_pkg/pwm_node.py
 resource/control_pkg
 test/test_copyright.py
 test/test_flake8.py

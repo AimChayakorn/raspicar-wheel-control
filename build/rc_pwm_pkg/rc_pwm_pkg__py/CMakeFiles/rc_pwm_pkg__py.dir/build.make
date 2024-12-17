@@ -70,8 +70,10 @@ rc_pwm_pkg__py/CMakeFiles/rc_pwm_pkg__py: rosidl_generator_py/rc_pwm_pkg/_rc_pwm
 rc_pwm_pkg__py/CMakeFiles/rc_pwm_pkg__py: rosidl_generator_py/rc_pwm_pkg/_rc_pwm_pkg_s.ep.rosidl_typesupport_introspection_c.c
 rc_pwm_pkg__py/CMakeFiles/rc_pwm_pkg__py: rosidl_generator_py/rc_pwm_pkg/_rc_pwm_pkg_s.ep.rosidl_typesupport_c.c
 rc_pwm_pkg__py/CMakeFiles/rc_pwm_pkg__py: rosidl_generator_py/rc_pwm_pkg/msg/_pwm.py
+rc_pwm_pkg__py/CMakeFiles/rc_pwm_pkg__py: rosidl_generator_py/rc_pwm_pkg/msg/_pub_pwm.py
 rc_pwm_pkg__py/CMakeFiles/rc_pwm_pkg__py: rosidl_generator_py/rc_pwm_pkg/msg/__init__.py
 rc_pwm_pkg__py/CMakeFiles/rc_pwm_pkg__py: rosidl_generator_py/rc_pwm_pkg/msg/_pwm_s.c
+rc_pwm_pkg__py/CMakeFiles/rc_pwm_pkg__py: rosidl_generator_py/rc_pwm_pkg/msg/_pub_pwm_s.c
 
 rosidl_generator_py/rc_pwm_pkg/_rc_pwm_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/rc_pwm_pkg/_rc_pwm_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_py/__init__.py
@@ -87,6 +89,7 @@ rosidl_generator_py/rc_pwm_pkg/_rc_pwm_pkg_s.ep.rosidl_typesupport_fastrtps_c.c:
 rosidl_generator_py/rc_pwm_pkg/_rc_pwm_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv_pkg_typesupport_entry_point.c.em
 rosidl_generator_py/rc_pwm_pkg/_rc_pwm_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/rc_pwm_pkg/_rc_pwm_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rc_pwm_pkg/msg/Pwm.idl
+rosidl_generator_py/rc_pwm_pkg/_rc_pwm_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/rc_pwm_pkg/msg/PubPwm.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/chayakorn/ros_ws/build/rc_pwm_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
 	cd /home/chayakorn/ros_ws/build/rc_pwm_pkg/rc_pwm_pkg__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/chayakorn/ros_ws/build/rc_pwm_pkg/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
@@ -99,17 +102,25 @@ rosidl_generator_py/rc_pwm_pkg/_rc_pwm_pkg_s.ep.rosidl_typesupport_c.c: rosidl_g
 rosidl_generator_py/rc_pwm_pkg/msg/_pwm.py: rosidl_generator_py/rc_pwm_pkg/_rc_pwm_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rc_pwm_pkg/msg/_pwm.py
 
+rosidl_generator_py/rc_pwm_pkg/msg/_pub_pwm.py: rosidl_generator_py/rc_pwm_pkg/_rc_pwm_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rc_pwm_pkg/msg/_pub_pwm.py
+
 rosidl_generator_py/rc_pwm_pkg/msg/__init__.py: rosidl_generator_py/rc_pwm_pkg/_rc_pwm_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rc_pwm_pkg/msg/__init__.py
 
 rosidl_generator_py/rc_pwm_pkg/msg/_pwm_s.c: rosidl_generator_py/rc_pwm_pkg/_rc_pwm_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rc_pwm_pkg/msg/_pwm_s.c
 
+rosidl_generator_py/rc_pwm_pkg/msg/_pub_pwm_s.c: rosidl_generator_py/rc_pwm_pkg/_rc_pwm_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/rc_pwm_pkg/msg/_pub_pwm_s.c
+
 rc_pwm_pkg__py: rc_pwm_pkg__py/CMakeFiles/rc_pwm_pkg__py
 rc_pwm_pkg__py: rosidl_generator_py/rc_pwm_pkg/_rc_pwm_pkg_s.ep.rosidl_typesupport_c.c
 rc_pwm_pkg__py: rosidl_generator_py/rc_pwm_pkg/_rc_pwm_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
 rc_pwm_pkg__py: rosidl_generator_py/rc_pwm_pkg/_rc_pwm_pkg_s.ep.rosidl_typesupport_introspection_c.c
 rc_pwm_pkg__py: rosidl_generator_py/rc_pwm_pkg/msg/__init__.py
+rc_pwm_pkg__py: rosidl_generator_py/rc_pwm_pkg/msg/_pub_pwm.py
+rc_pwm_pkg__py: rosidl_generator_py/rc_pwm_pkg/msg/_pub_pwm_s.c
 rc_pwm_pkg__py: rosidl_generator_py/rc_pwm_pkg/msg/_pwm.py
 rc_pwm_pkg__py: rosidl_generator_py/rc_pwm_pkg/msg/_pwm_s.c
 rc_pwm_pkg__py: rc_pwm_pkg__py/CMakeFiles/rc_pwm_pkg__py.dir/build.make

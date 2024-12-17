@@ -27,6 +27,7 @@ find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Pwm.msg"
+  "msg/PubPwm.msg"
 )
 
 ament_package()

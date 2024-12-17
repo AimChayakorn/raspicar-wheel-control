@@ -78,11 +78,18 @@ rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pwm__rosidl_typesupport
 rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pwm__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/rosidl_typesupport_introspection_c/resource/srv__rosidl_typesupport_introspection_c.h.em
 rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pwm__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/rosidl_typesupport_introspection_c/resource/srv__type_support.c.em
 rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pwm__rosidl_typesupport_introspection_c.h: rosidl_adapter/rc_pwm_pkg/msg/Pwm.idl
+rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pwm__rosidl_typesupport_introspection_c.h: rosidl_adapter/rc_pwm_pkg/msg/PubPwm.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/chayakorn/ros_ws/build/rc_pwm_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C introspection for ROS interfaces"
 	/usr/bin/python3 /opt/ros/humble/lib/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c --generator-arguments-file /home/chayakorn/ros_ws/build/rc_pwm_pkg/rosidl_typesupport_introspection_c__arguments.json
 
+rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pub_pwm__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pwm__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pub_pwm__rosidl_typesupport_introspection_c.h
+
 rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pwm__type_support.c: rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pwm__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pwm__type_support.c
+
+rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pub_pwm__type_support.c: rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pwm__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pub_pwm__type_support.c
 
 CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pwm__type_support.c.o: CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/flags.make
 CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pwm__type_support.c.o: rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pwm__type_support.c
@@ -98,21 +105,37 @@ CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pwm__type_support.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chayakorn/ros_ws/build/rc_pwm_pkg/rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pwm__type_support.c -o CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pwm__type_support.c.s
 
+CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pub_pwm__type_support.c.o: CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pub_pwm__type_support.c.o: rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pub_pwm__type_support.c
+CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pub_pwm__type_support.c.o: CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chayakorn/ros_ws/build/rc_pwm_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pub_pwm__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pub_pwm__type_support.c.o -MF CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pub_pwm__type_support.c.o.d -o CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pub_pwm__type_support.c.o -c /home/chayakorn/ros_ws/build/rc_pwm_pkg/rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pub_pwm__type_support.c
+
+CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pub_pwm__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pub_pwm__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chayakorn/ros_ws/build/rc_pwm_pkg/rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pub_pwm__type_support.c > CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pub_pwm__type_support.c.i
+
+CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pub_pwm__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pub_pwm__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chayakorn/ros_ws/build/rc_pwm_pkg/rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pub_pwm__type_support.c -o CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pub_pwm__type_support.c.s
+
 # Object files for target rc_pwm_pkg__rosidl_typesupport_introspection_c
 rc_pwm_pkg__rosidl_typesupport_introspection_c_OBJECTS = \
-"CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pwm__type_support.c.o"
+"CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pwm__type_support.c.o" \
+"CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pub_pwm__type_support.c.o"
 
 # External object files for target rc_pwm_pkg__rosidl_typesupport_introspection_c
 rc_pwm_pkg__rosidl_typesupport_introspection_c_EXTERNAL_OBJECTS =
 
 librc_pwm_pkg__rosidl_typesupport_introspection_c.so: CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pwm__type_support.c.o
+librc_pwm_pkg__rosidl_typesupport_introspection_c.so: CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pub_pwm__type_support.c.o
 librc_pwm_pkg__rosidl_typesupport_introspection_c.so: CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/build.make
 librc_pwm_pkg__rosidl_typesupport_introspection_c.so: librc_pwm_pkg__rosidl_generator_c.so
 librc_pwm_pkg__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so
 librc_pwm_pkg__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 librc_pwm_pkg__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/librcutils.so
 librc_pwm_pkg__rosidl_typesupport_introspection_c.so: CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chayakorn/ros_ws/build/rc_pwm_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C shared library librc_pwm_pkg__rosidl_typesupport_introspection_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chayakorn/ros_ws/build/rc_pwm_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library librc_pwm_pkg__rosidl_typesupport_introspection_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -123,6 +146,8 @@ CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/clean
 
+CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pub_pwm__rosidl_typesupport_introspection_c.h
+CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pub_pwm__type_support.c
 CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pwm__rosidl_typesupport_introspection_c.h
 CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/rc_pwm_pkg/msg/detail/pwm__type_support.c
 	cd /home/chayakorn/ros_ws/build/rc_pwm_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chayakorn/ros_ws/src/rc_pwm_pkg /home/chayakorn/ros_ws/src/rc_pwm_pkg /home/chayakorn/ros_ws/build/rc_pwm_pkg /home/chayakorn/ros_ws/build/rc_pwm_pkg /home/chayakorn/ros_ws/build/rc_pwm_pkg/CMakeFiles/rc_pwm_pkg__rosidl_typesupport_introspection_c.dir/DependInfo.cmake --color=$(COLOR)

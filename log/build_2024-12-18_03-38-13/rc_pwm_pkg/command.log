@@ -1,0 +1,2 @@
+Invoking command in '/home/chayakorn/ros_ws/build/rc_pwm_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/chayakorn/ros_ws/install/control_pkg:/opt/ros/humble /usr/bin/cmake --build /home/chayakorn/ros_ws/build/rc_pwm_pkg -- -j16 -l16
+Invoked command in '/home/chayakorn/ros_ws/build/rc_pwm_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/chayakorn/ros_ws/install/control_pkg:/opt/ros/humble /usr/bin/cmake --build /home/chayakorn/ros_ws/build/rc_pwm_pkg -- -j16 -l16

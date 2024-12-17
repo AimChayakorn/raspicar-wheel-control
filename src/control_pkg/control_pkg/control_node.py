@@ -31,7 +31,7 @@ class MinimalPublisher(Node):
                 self.msg.code = abs_event.event.code
                 self.msg.value = abs_event.event.value
                 self.publisher_.publish(self.msg)
-                self.get_logger().info(f"Publishing: {self.msg.code}, with value {self.msg.value}")
+                self.get_logger().info(f"Publishing: code {self.msg.code}, with value {self.msg.value}")
 
 def spin_ros(executor, node):
     executor.add_node(node)

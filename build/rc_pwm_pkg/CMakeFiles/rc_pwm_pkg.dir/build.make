@@ -67,6 +67,7 @@ include CMakeFiles/rc_pwm_pkg.dir/compiler_depend.make
 include CMakeFiles/rc_pwm_pkg.dir/progress.make
 
 CMakeFiles/rc_pwm_pkg: /home/chayakorn/ros_ws/src/rc_pwm_pkg/msg/Pwm.msg
+CMakeFiles/rc_pwm_pkg: /home/chayakorn/ros_ws/src/rc_pwm_pkg/msg/PubPwm.msg
 
 rc_pwm_pkg: CMakeFiles/rc_pwm_pkg
 rc_pwm_pkg: CMakeFiles/rc_pwm_pkg.dir/build.make
