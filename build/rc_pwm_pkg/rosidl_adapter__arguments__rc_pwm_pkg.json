@@ -1,0 +1,6 @@
+{
+  "package_name": "rc_pwm_pkg",
+  "non_idl_tuples": [
+    "/home/chayakorn/ros_ws/src/rc_pwm_pkg:msg/Pwm.msg"
+  ]
+}
