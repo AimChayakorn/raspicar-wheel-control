@@ -23,47 +23,76 @@ class PublisherSubscriberNode(Node):
         )
         self.cur_pwm_left = 0
         self.cur_pwm_right = 0
+        self.cur_dif = 0
+        self.acc = 255
+        self.dcc = 255
         self.is_listening = False # listening state
 
-        self.timer_period = 0.5  # Publish every 0.5 second
+        self.timer_period = 0.1  # Publish every 0.5 second
         self.timer = self.create_timer(self.timer_period, self.timer_callback)
 
         self.get_logger().info('Node initialized: Subscribing to "topic" and publishing to "output_pwm"')
 
     def listener_callback(self, msg):
         self.is_listening = True
+        
         if msg.code == 0:
-            norm_angle = msg.value / 32767.0 # normalize from 0 to 1
+            norm_angle = msg.value / 65525.0 # normalize from 0 to 1
             if norm_angle > 0.5 and self.cur_pwm_right > 0:
-                self.cur_pwm_right -= norm_angle - 0.5
+                self.cur_dif = 20 * (norm_angle - 0.5)
             elif self.cur_pwm_left > 0:
-                self.cur_pwm_left -= 0.5 - norm_angle
-        elif msg.code == 4: # accelerate
+                self.cur_dif = 20 * (norm_angle - 0.5)
+        elif msg.code == 2: # accelerate
+            self.acc = msg.value
             norm_acc = msg.value / 255.0 # normalize from 0 to 1
             if self.cur_pwm_left < 100:
-                self.cur_pwm_left += 2 * norm_acc
+                self.cur_pwm_left += 0.1 * (1 - norm_acc)
             if self.cur_pwm_right < 100:
-                self.cur_pwm_right += 2 * norm_acc
+                self.cur_pwm_right += 0.1 * (1 - norm_acc)
         elif msg.code == 5: # decelerate
+            self.dcc = msg.value
             norm_dcc = msg.value / 255.0 # normalize from 0 to 1
             if self.cur_pwm_left > 0:
-                self.cur_pwm_left -= 2 * norm_dcc
+                self.cur_pwm_left -= 0.1 * (1 - norm_dcc)
             if self.cur_pwm_right > 0:
-                self.cur_pwm_right -= 2 * norm_dcc
-        self.get_logger().info(f'Received: "{msg.code}" value: {msg.value}')
+                self.cur_pwm_right -= 0.1 * (1 - norm_dcc)
+        #self.get_logger().info(f'Received: "{msg.code}" value: {msg.value}')
         
 
     def timer_callback(self):
         ret_pwm = PubPwm()
-        if not self.is_listening:
+        if not (self.is_listening or self.acc != 255 or self.dcc != 255): # slow down if pedal is released
             if self.cur_pwm_right > 0:
                 self.cur_pwm_right -= 1
             if self.cur_pwm_left > 0:
                 self.cur_pwm_left -= 1
 
-        ret_pwm.left_pwm = self.cur_pwm_left
-        ret_pwm.right_pwm = self.cur_pwm_right
+        if self.acc != 255 and not self.is_listening: # continue accelerate if pedal is pressed
+            hold_acc = self.acc / 255.0 # normalize from 0 to 1
+            if self.cur_pwm_left < 100:
+                self.cur_pwm_left += 3 * (1 - hold_acc)
+            if self.cur_pwm_right < 100:
+                self.cur_pwm_right += 3 * (1 - hold_acc)
 
+        if self.dcc != 255 and not self.is_listening: # continue decelerate if pedal is pressed
+            hold_dcc = self.dcc / 255.0 # normalize from 0 to 1
+            if self.cur_pwm_left > 0:
+                self.cur_pwm_left -= 10 * (1 - hold_dcc)
+            if self.cur_pwm_right > 0:
+                self.cur_pwm_right -= 10 * (1 - hold_dcc)
+
+        if self.cur_pwm_left - self.cur_dif < 0 :
+            self.cur_pwm_left = 0
+        elif self.cur_pwm_left - self.cur_dif > 100 :
+            self.cur_pwm_left -= self.cur_pwm_left + self.cur_dif - 100
+        if self.cur_pwm_right + self.cur_dif < 0 :
+            self.cur_pwm_right = 0
+        elif self.cur_pwm_right + self.cur_dif > 100 :
+            self.cur_pwm_right -= self.cur_pwm_right + self.cur_dif - 100
+        ret_pwm.left_pwm = round(self.cur_pwm_left - self.cur_dif)
+        ret_pwm.right_pwm = round(self.cur_pwm_right + self.cur_dif)
+
+        self.is_listening = False        
         # Publish the status
         self.publisher_.publish(ret_pwm)
         self.get_logger().info(f'Publishing: Left "{ret_pwm.left_pwm}" , Right "{ret_pwm.right_pwm}"')

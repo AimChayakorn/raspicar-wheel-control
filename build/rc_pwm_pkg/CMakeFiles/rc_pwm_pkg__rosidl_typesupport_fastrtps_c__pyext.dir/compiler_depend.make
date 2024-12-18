@@ -245,8 +245,13 @@ CMakeFiles/rc_pwm_pkg__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator
   rosidl_generator_c/rc_pwm_pkg/msg/detail/pwm__type_support.h \
   rosidl_generator_c/rc_pwm_pkg/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_c/rc_pwm_pkg/msg/detail/pwm__struct.h \
-  rosidl_generator_c/rc_pwm_pkg/msg/detail/pwm__functions.h
+  rosidl_generator_c/rc_pwm_pkg/msg/detail/pwm__functions.h \
+  rosidl_generator_c/rc_pwm_pkg/msg/detail/pub_pwm__type_support.h \
+  rosidl_generator_c/rc_pwm_pkg/msg/detail/pub_pwm__struct.h \
+  rosidl_generator_c/rc_pwm_pkg/msg/detail/pub_pwm__functions.h
 
+
+rosidl_generator_c/rc_pwm_pkg/msg/detail/pub_pwm__functions.h:
 
 rosidl_generator_c/rc_pwm_pkg/msg/rosidl_generator_c__visibility_control.h:
 
@@ -394,6 +399,8 @@ rosidl_generator_c/rc_pwm_pkg/msg/detail/pwm__struct.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
+rosidl_generator_c/rc_pwm_pkg/msg/detail/pub_pwm__type_support.h:
+
 /usr/include/asm-generic/errno.h:
 
 /usr/include/python3.10/cpython/fileutils.h:
@@ -401,6 +408,8 @@ rosidl_generator_c/rc_pwm_pkg/msg/detail/pwm__struct.h:
 /usr/include/errno.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+
+rosidl_generator_c/rc_pwm_pkg/msg/detail/pub_pwm__struct.h:
 
 /opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h:
 

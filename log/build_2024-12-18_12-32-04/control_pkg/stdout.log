@@ -1,0 +1,24 @@
+running egg_info
+writing ../../build/control_pkg/control_pkg.egg-info/PKG-INFO
+writing dependency_links to ../../build/control_pkg/control_pkg.egg-info/dependency_links.txt
+writing entry points to ../../build/control_pkg/control_pkg.egg-info/entry_points.txt
+writing requirements to ../../build/control_pkg/control_pkg.egg-info/requires.txt
+writing top-level names to ../../build/control_pkg/control_pkg.egg-info/top_level.txt
+reading manifest file '../../build/control_pkg/control_pkg.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/control_pkg/control_pkg.egg-info/SOURCES.txt'
+running build
+running build_py
+copying control_pkg/control_node.py -> /home/chayakorn/ros_ws/build/control_pkg/build/lib/control_pkg
+running install
+running install_lib
+copying /home/chayakorn/ros_ws/build/control_pkg/build/lib/control_pkg/control_node.py -> /home/chayakorn/ros_ws/install/control_pkg/lib/python3.10/site-packages/control_pkg
+byte-compiling /home/chayakorn/ros_ws/install/control_pkg/lib/python3.10/site-packages/control_pkg/control_node.py to control_node.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/chayakorn/ros_ws/install/control_pkg/lib/python3.10/site-packages/control_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/control_pkg/control_pkg.egg-info to /home/chayakorn/ros_ws/install/control_pkg/lib/python3.10/site-packages/control_pkg-0.0.0-py3.10.egg-info
+running install_scripts
+Installing control_node script to /home/chayakorn/ros_ws/install/control_pkg/lib/control_pkg
+Installing pwm_node script to /home/chayakorn/ros_ws/install/control_pkg/lib/control_pkg
+writing list of installed files to '/home/chayakorn/ros_ws/build/control_pkg/install.log'
