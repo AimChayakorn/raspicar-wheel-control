@@ -26,6 +26,7 @@ class PublisherSubscriberNode(Node):
         self.cur_dif = 0
         self.acc = 0
         self.dcc = 0
+        self.dirr = 0 # 0:forward 1:backward
 
         self.timer_period = 0.1  # Publish every 0.5 second
         self.timer = self.create_timer(self.timer_period, self.timer_callback)
@@ -36,17 +37,23 @@ class PublisherSubscriberNode(Node):
         
         if msg.code == 0:
             norm_angle = msg.value / 65525.0 # normalize from 0 to 1
-            self.cur_dif = 100 * (norm_angle - 0.5)
+            self.cur_dif = 150 * (norm_angle - 0.5)
         elif msg.code == 2: # accelerate
             self.acc = 255 - msg.value
+            self.dirr = 0
         elif msg.code == 5: # decelerate
             self.dcc = 255 - msg.value
+            self.dirr = 0
+        elif msg.code == 1:
+            self.acc = 255 - msg.value
+            self.dirr = 1
 
         #self.get_logger().info(f'Received: "{msg.code}" value: {msg.value}')
         
 
     def timer_callback(self):
         ret_pwm = PubPwm()
+        ret_pwm.dirr = self.dirr
         if self.acc > 0:
             if self.cur_pwm_left + 3 * (self.acc / 255.0) < 100:
                 self.cur_pwm_left += 3 * (self.acc / 255.0)
@@ -84,6 +91,7 @@ class PublisherSubscriberNode(Node):
         self.get_logger().info(f'Logging: acc "{self.acc}" , dcc "{self.dcc}"')
         self.get_logger().info(f'Logging: right "{self.cur_pwm_right}" , left "{self.cur_pwm_left}"')
         self.get_logger().info(f'Logging: diff "{self.cur_dif}"')
+        self.get_logger().info(f'Logging: direction "{self.dirr}"')
 
 def main(args=None):
     rclpy.init(args=args)
