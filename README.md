@@ -3,16 +3,16 @@ This project demonstrates a basic **ROS pwm node publisher** setup using Python.
 
 ## 🧱 Project Structure
 
-ros_ws/
-├── build/
-│ ├── control_pkg
-│ └── rc_pwm_pkg
-├── install/
-├── log/
-├── src/
-│ ├── control_pkg
-│ └── rc_pwm_pkg
-└── README.md
+ros_ws/  
+├── build/  
+│ ├── control_pkg  
+│ └── rc_pwm_pkg  
+├── install/  
+├── log/  
+├── src/  
+│ ├── control_pkg  
+│ └── rc_pwm_pkg  
+└── README.md  
 
 ## ⚙️ Requirements
 
