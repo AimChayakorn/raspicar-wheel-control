@@ -10,7 +10,7 @@ import threading
 class MinimalPublisher(Node):
     def __init__(self):
         super().__init__('minimal_publisher')
-        device_path = '/dev/input/event25'
+        device_path = '/dev/input/event18'
         self.device = evdev.InputDevice(device_path)
         self.get_logger().info(f'Connected to device: {self.device.name}')
 
