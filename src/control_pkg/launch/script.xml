@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <node pkg="control_pkg" exec="control_node" name="control_node"/>
+    <node pkg="control_pkg" exec="pwm_node" name="pwm_node"/>
+</launch>
