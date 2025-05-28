@@ -59,3 +59,9 @@ ros2 run control_pkg control_node
 ```bash
 ros2 run control_pkg pwm_node
 ```
+
+or to run using launch file
+
+```bash
+ros2 launch control_pkg script.xml
+```
